@@ -1,0 +1,2 @@
+name_params PACKAGE GITHUB_USER GITHUB_REPO
+git --git-dir=$BD/${PACKAGE}/.git remote add origin https://github.com/${GITHUB_USER}/${GITHUB_REPO}.git

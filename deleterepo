@@ -1,0 +1,2 @@
+name_params GITHUB_USER REPO_NAME
+curl --user "${GITHUB_USER}" -X DELETE  https://api.github.com/repos/${GITHUB_USER}/${REPO_NAME}
