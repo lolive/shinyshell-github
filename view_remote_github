@@ -1,2 +1,7 @@
 name_params PACKAGE
-git --git-dir=$BD/${PACKAGE}/.git remote -v
+if [[ -n $PACKAGE ]]; then
+local BASE_DIR=${BD}/${PACKAGE}
+else
+local BASE_DIR=${BD}/
+fi
+find ${BASE_DIR} -type d -mindepth 2 -name .git -exec sh -c "dirname {}|sed 's/.*\/\([^/]\+\)/---- \1: ----/'" \; -exec git --git-dir={} remote -v \; -exec echo \;
