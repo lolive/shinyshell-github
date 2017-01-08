@@ -1,3 +1,4 @@
+name_params GITHUB_USER
 for package in ${BD}/*/; do
  push_package `basename ${package}`
 done
