@@ -1,7 +1,16 @@
 name_params PACKAGE
 if [[ -n $PACKAGE ]]; then
-local BASE_DIR=${BD}/${PACKAGE}
+ local PACKAGES_TO_MANAGE=${BD}/${PACKAGE}
 else
-local BASE_DIR=${BD}/
+ local PACKAGES_TO_MANAGE=${BD}/*
 fi
-find ${BASE_DIR} -type d -mindepth 2 -name .git -exec sh -c "dirname {}|sed 's/.*\/\([^/]\+\)/---- \1: ----/'" \; -exec git --git-dir={} remote -v \; -exec echo \;
+for package_dir in ${PACKAGES_TO_MANAGE}; do
+ local git_dir=${package_dir}/.git
+ local package_name=`basename ${package_dir}`
+ if [[ -d ${git_dir} ]]; then
+  local git_remote=`git --git-dir=${git_dir} remote get-url origin`
+ else
+  local git_remote="Not a .git repository (use commands \"newrepo 'YOUR_GITHUB_USER' shinyshell-${package_name}\" + \"set_remote_repo $package_name shinyshell-$package_name\" to correct that)"
+ fi
+ echo $package_name' -> '$git_remote 
+done
