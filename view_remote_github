@@ -1,6 +1,5 @@
-name_params PACKAGE
 if [[ -n $PACKAGE ]]; then
- local PACKAGES_TO_MANAGE=${BD}/${PACKAGE}
+ local PACKAGES_TO_MANAGE=${BD}/${1}
 else
  local PACKAGES_TO_MANAGE=${BD}/*
 fi
