@@ -1,4 +1,5 @@
 name_params PACKAGE GITHUB_USER
+git config credential.helper store
 mute_pushd ${BD}/${PACKAGE}
 if [[ -d .git ]]; then
  git add .
