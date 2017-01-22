@@ -3,3 +3,4 @@ for package in ${BD}/*/; do
  push_package `basename ${package}`
 done
 push_package .raw
+push_package .
