@@ -4,7 +4,7 @@ mute_pushd ${BD}/${PACKAGE}
 if [ ${PACKAGE} = '.' ]; then
  regenerate_shinyshell_readme
 else
-  readme_package > README.md
+ readme_package > README.md
 fi
 if [[ -d .git ]]; then
  git add .
