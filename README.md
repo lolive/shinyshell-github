@@ -2,8 +2,6 @@ This is package github of Shinyshell.
 
 This package contains the following functions:
 
-$ github  : ""
-
 $ deleterepo GITHUB_USER REPO_NAME : "Delete the repo REPO_NAME on the GitHub of user GITHUB_USER"
 
 $ listrepos GITHUB_USER : "List the GitHub repositories of user GITHUB_USER"
