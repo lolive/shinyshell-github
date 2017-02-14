@@ -6,7 +6,7 @@ $ deleterepo GITHUB_USER REPO_NAME : "Delete the repo REPO_NAME on the GitHub of
 
 $ listrepos GITHUB_USER : "List the GitHub repositories of user GITHUB_USER"
 
-$ newrepo GITHUB_USER GITHUB_REPO_NAME : "Create a new repo for user GITHUB_USER named GITHUB_REPO_NAME"
+$ newrepo GITHUB_USER GITHUB_REPO_NAME : "Create a new repo for user GITHUB_USER named GITHUB_REPO_NAME. May be you want to run this after: set_remote_github ${GITHUB_REPO_NAME#shinyshell-} ${GITHUB_USER} ${GITHUB_REPO_NAME}"
 
 $ push_package PACKAGE GITHUB_USER : ""
 

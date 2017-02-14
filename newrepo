@@ -1,3 +1,4 @@
 name_params GITHUB_USER GITHUB_REPO_NAME
 curl --user "${GITHUB_USER}" -X POST --data '{ "name": "'${GITHUB_REPO_NAME}'"}' https://api.github.com/user/repos
-
+echo "May be you want now to run:"
+echo "set_remote_github ${GITHUB_REPO_NAME#shinyshell-} ${GITHUB_USER} ${GITHUB_REPO_NAME}"
