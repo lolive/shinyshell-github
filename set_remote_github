@@ -1,9 +1,9 @@
-name_params PACKAGE GITHUB_USER GITHUB_REPO
+name_params PACKAGE GITHUB_USER GITHUB_REPO_NAME
 local GIT_DIR=$BD/${PACKAGE}/.git
 if [[ ! -d $GIT_DIR ]]; then
  git --git-dir=$GIT_DIR init
 fi
 git config credential.helper store
 git --git-dir=$GIT_DIR remote remove origin 2>/dev/null
-git --git-dir=$GIT_DIR remote add origin https://${GITHUB_USER}@github.com/${GITHUB_USER}/${GITHUB_REPO}.git
+git --git-dir=$GIT_DIR remote add origin https://${GITHUB_USER}@github.com/${GITHUB_USER}/${GITHUB_REPO_NAME}.git
 echo "Remote origin for package $PACKAGE is set to "`git --git-dir=$GIT_DIR remote get-url origin`

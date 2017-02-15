@@ -1,0 +1,14 @@
+name_params PACKAGE GITHUB_USER
+local GITHUB_REPO_NAME=shinyshell-${PACKAGE}
+
+mute_pushd ${BD}
+
+[ ! -a ${PACKAGE} ] || exit
+mkdir ${PACKAGE} 
+
+newrepo
+local GITHUB_REPO_URL=`set_remote_github`
+git submodule add $GITHUB_REPO_URL $PACKAGE
+
+mute_popd
+
