@@ -14,7 +14,7 @@ $ push_packages GITHUB_USER : "Each of your Shinyshell packages synchronized wit
 
 $ set_github_user  : ""
 
-$ set_remote_github PACKAGE GITHUB_USER GITHUB_REPO : ""
+$ set_remote_github PACKAGE GITHUB_USER GITHUB_REPO : "(Init and) set the remote github repo for a shinyshell package Example: set_remote_github sparql lolive shinyshell-sparql"
 
 $ view_remote_github  : ""
 

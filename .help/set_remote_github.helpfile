@@ -1,0 +1,5 @@
+(Init and) set the remote github repo for a shinyshell package
+
+(Init and) set the remote github repo for a shinyshell package
+Example:
+set_remote_github sparql lolive shinyshell-sparql
