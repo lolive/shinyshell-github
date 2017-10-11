@@ -11,6 +11,7 @@ if [[ -d .git || -f .git ]]; then
  git add .
  local MESSAGE=`LANG=C;git -c color.status=false status | sed -n -r -e '1,/Changes to be committed:/ d' -e '1,1 d' -e '/^Untracked files:/,$ d' -e 's/^\s*//' -e '/./p' `
  git commit -m "$MESSAGE"
+ git checkout -B master
  git fetch
  git rebase origin/master
  git push --set-upstream origin master
