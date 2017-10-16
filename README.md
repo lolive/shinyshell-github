@@ -1,4 +1,4 @@
-This is package github of Shinyshell.
+# Package "Shinyshell-github":
 
 This package contains the following functions:
 
