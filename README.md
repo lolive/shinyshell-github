@@ -5,10 +5,14 @@ This package contains the following functions:
 
 ## deleterepo GITHUB_USER REPO_NAME :
 
+Delete a repo on GitHub
+
 Delete the repo REPO_NAME on the GitHub of user GITHUB_USER
 
 
 ## listrepos GITHUB_USER :
+
+List your repositories on GitHub
 
 List the GitHub repositories of user GITHUB_USER
 
@@ -18,6 +22,8 @@ List the GitHub repositories of user GITHUB_USER
 
 
 ## newrepo GITHUB_USER GITHUB_REPO_NAME :
+
+Create a repo on Github
 
 Create a new repo for user GITHUB_USER named GITHUB_REPO_NAME.
 May be you want to run this after: 
@@ -30,6 +36,8 @@ set_remote_github ${GITHUB_REPO_NAME#shinyshell-} ${GITHUB_USER}  ${GITHUB_REPO_
 
 ## push_packages GITHUB_USER :
 
+Push all your Shinyshell packages on Github
+
 Each of your Shinyshell packages synchronized with a Github repo will be pushed
 on Github.
 
@@ -39,6 +47,8 @@ on Github.
 
 
 ## set_remote_github PACKAGE GITHUB_USER GITHUB_REPO_NAME :
+
+(Init and) set the remote github repo for a shinyshell package
 
 (Init and) set the remote github repo for a shinyshell package
 Example:
