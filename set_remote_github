@@ -6,4 +6,5 @@ fi
 git config credential.helper store
 git --git-dir=$GIT_DIR remote remove origin 2>/dev/null
 git --git-dir=$GIT_DIR remote add origin https://${GITHUB_USER}@github.com/${GITHUB_USER}/${GITHUB_REPO_NAME}.git
-echo "Remote origin for package $PACKAGE is set to "`git --git-dir=$GIT_DIR remote get-url origin`
+echo "Remote origin for package $PACKAGE is set to " 1>&2 
+echo `git --git-dir=$GIT_DIR remote get-url origin`

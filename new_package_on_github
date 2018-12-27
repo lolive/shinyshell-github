@@ -8,7 +8,7 @@ mkdir ${PACKAGE}
 
 newrepo
 local GITHUB_REPO_URL=`set_remote_github`
-git submodule add $GITHUB_REPO_URL $PACKAGE
+echo git submodule add $GITHUB_REPO_URL $PACKAGE
 
 mute_popd
 
